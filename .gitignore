@@ -1,0 +1,19 @@
+# Node
+node_modules
+.pnpm-store
+
+# Builds
+.next
+.dist
+build
+coverage
+
+# Env
+.env
+.env.*
+
+# Prisma
+packages/api/prisma/*.db
+
+# Mac/OS
+.DS_Store

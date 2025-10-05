@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@futurosimples/types": [
+        "packages/types/src"
+      ],
+      "@futurosimples/sim": [
+        "packages/simulation-engine/src"
+      ],
+      "@futurosimples/ui": [
+        "packages/ui/src"
+      ]
+    }
+  }
+}
