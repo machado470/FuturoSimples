@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FuturoSimples Demo</title>
+  <!-- Load Chart.js from CDN for simplicity -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    label {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+    }
+    input, select {
+      padding: 5px;
+      font-size: 1rem;
+    }
+    button {
+      padding: 10px 15px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    #results {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>FuturoSimples Demo</h1>
+  <p>Insira suas informações financeiras básicas para simular seu futuro financeiro.</p>
+  <form id="simulation-form">
+    <label>
+      Renda mensal (R$):
+      <input type="number" id="renda" step="0.01" required>
+    </label>
+    <label>
+      Gastos mensais (R$):
+      <input type="number" id="gastos" step="0.01" required>
+    </label>
+    <fieldset>
+      <legend>Dívida</legend>
+      <label>
+        Saldo (R$):
+        <input type="number" id="divida-saldo" step="0.01" value="0">
+      </label>
+      <label>
+        Taxa ao mês (%):
+        <input type="number" id="divida-taxa" step="0.01" value="0">
+      </label>
+      <label>
+        Parcela mensal (R$):
+        <input type="number" id="divida-parcela" step="0.01" value="0">
+      </label>
+    </fieldset>
+    <label>
+      Perfil de risco:
+      <select id="perfil">
+        <option value="conservador">Conservador</option>
+        <option value="moderado" selected>Moderado</option>
+        <option value="arrojado">Arrojado</option>
+      </select>
+    </label>
+    <button type="submit">Simular</button>
+  </form>
+
+  <div id="results"></div>
+  <canvas id="chart" width="400" height="200"></canvas>
+
+  <script src="main.js"></script>
+</body>
+</html>
